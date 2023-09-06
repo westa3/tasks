@@ -1,12 +1,52 @@
 import React from "react";
 import "./App.css";
+import { Button, Container, Row, Col } from "react-bootstrap";
 
 function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
-                UD CISC275 with React Hooks and TypeScript
+                <h1>UD CISC275 with React Hooks and TypeScript heading</h1>
             </header>
+            <div>
+                <img
+                    src={"./Sunset.jpg"}
+                    alt="A picture of the sunset over water"
+                />
+            </div>
+            <Container>
+                <Row>
+                    <Col>
+                        <div
+                            style={{
+                                width: "column-width",
+                                height: "20px",
+                                backgroundColor: "red"
+                            }}
+                        ></div>
+                        <ol>
+                            <li>First element</li>
+                            <li>Second element</li>
+                            <li>Third element</li>
+                        </ol>
+                    </Col>
+                    <Col>
+                        <div
+                            style={{
+                                width: "column-width",
+                                height: "20px",
+                                backgroundColor: "red"
+                            }}
+                        ></div>
+                        <div>
+                            <Button onClick={() => console.log("Hello World!")}>
+                                {" "}
+                                Log Hello World{" "}
+                            </Button>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
